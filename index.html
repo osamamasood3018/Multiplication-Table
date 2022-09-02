@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>body {background-color: rgb(207, 182, 172);}
+</style>
+<body>
+    <div class =>
+    <h1>Multiplication Table</h1>
+    <form onsubmit="dosum(); return false" >
+    Enter No:
+    <input type="number" id="num1" ><br /><br />
+    Enter table:
+    <input type="number" id="num2" ><br>
+   <br> <input type="button" value="The Table of given number is: " onClick="multiply()" >
+    <p id="result"></p>
+</div>
+</form>
+    <script>
+        function multiply() {
+            let number = document.getElementById('num1').value;
+            let  secondno= document.getElementById('num2').value;
+            let equal = "";
+            for (let i = 1; i <= secondno; i++) {
+                equal = equal + number + " * " + i + " = " + i * number + "<br/>";
+            }
+            document.getElementById("result").innerHTML = equal;
+        }
+    </script>
+</body>
+</html>
